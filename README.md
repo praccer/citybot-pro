@@ -85,5 +85,4 @@ src/
 - ✅ Navigation vers pages de détail services (`/services/:id`)
 - ✅ Mode clair / sombre
 - ✅ Langue française / anglaise
-- ✅ Page 404 personnalisée
 - ✅ Design responsive (sidebar réduite sur mobile)
