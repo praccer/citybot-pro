@@ -1,0 +1,251 @@
+{
+  "bot": {
+    "name": "NOVA",
+    "fullName": "Navigateur Officiel de la Ville Augmentee",
+    "version": "1.8.0",
+    "city": "NeoVille",
+    "avatar": "nova-avatar.png"
+  },
+
+  "services": [
+    {
+      "id": "svc-001",
+      "category": "voirie",
+      "name": "Direction de la Voirie",
+      "description": "Gestion des routes, trottoirs, eclairage public et mobilier urbain de NeoVille.",
+      "icon": "road",
+      "horaires": "Lundi - Vendredi : 08h00 - 17h00",
+      "contact": "voirie@neoville.smart",
+      "telephone": "0800-NEO-001",
+      "urgence": false
+    },
+    {
+      "id": "svc-002",
+      "category": "transport",
+      "name": "NeoTransit — Transports Urbains",
+      "description": "Reseau de bus electriques, metro magnetique et velopartage intelligent couvrant toute la metropole.",
+      "icon": "bus",
+      "horaires": "Service 24h/24, 7j/7",
+      "contact": "transit@neoville.smart",
+      "telephone": "0800-NEO-002",
+      "urgence": false
+    },
+    {
+      "id": "svc-003",
+      "category": "environnement",
+      "name": "Bureau de l'Environnement",
+      "description": "Collecte intelligente des dechets, espaces verts, qualite de l'air et energie renouvelable.",
+      "icon": "leaf",
+      "horaires": "Lundi - Samedi : 07h30 - 18h00",
+      "contact": "eco@neoville.smart",
+      "telephone": "0800-NEO-003",
+      "urgence": false
+    },
+    {
+      "id": "svc-004",
+      "category": "securite",
+      "name": "Police Municipale NeoVille",
+      "description": "Securite des espaces publics, gestion des infractions et assistance aux citoyens.",
+      "icon": "shield",
+      "horaires": "24h/24 — 7j/7",
+      "contact": "police@neoville.smart",
+      "telephone": "17",
+      "urgence": true
+    },
+    {
+      "id": "svc-005",
+      "category": "sante",
+      "name": "Centre de Sante Communautaire",
+      "description": "Consultations medicales de proximite, vaccinations, sante mentale et programmes de prevention.",
+      "icon": "heart",
+      "horaires": "Lundi - Vendredi : 08h00 - 20h00 / Samedi : 09h00 - 14h00",
+      "contact": "sante@neoville.smart",
+      "telephone": "0800-NEO-005",
+      "urgence": false
+    },
+    {
+      "id": "svc-006",
+      "category": "education",
+      "name": "Direction de l'Education",
+      "description": "Gestion des ecoles, inscriptions scolaires, activites parascolaires et soutien aux familles.",
+      "icon": "book",
+      "horaires": "Lundi - Vendredi : 09h00 - 17h00",
+      "contact": "education@neoville.smart",
+      "telephone": "0800-NEO-006",
+      "urgence": false
+    }
+  ],
+
+  "reportTypes": [
+    { "id": "rt-01", "label": "Voirie abimee",         "category": "voirie"       },
+    { "id": "rt-02", "label": "Eclairage defectueux",  "category": "voirie"       },
+    { "id": "rt-03", "label": "Depot sauvage",          "category": "environnement"},
+    { "id": "rt-04", "label": "Arbre dangereux",        "category": "environnement"},
+    { "id": "rt-05", "label": "Panne transport",        "category": "transport"    },
+    { "id": "rt-06", "label": "Comportement suspect",   "category": "securite"     },
+    { "id": "rt-07", "label": "Bruit excessif",         "category": "securite"     },
+    { "id": "rt-08", "label": "Autre",                  "category": "general"      }
+  ],
+
+  "responses": [
+    {
+      "id": "nova-001",
+      "category": "greeting",
+      "triggers": ["bonjour", "salut", "hello", "bonsoir", "hey", "bonne journee"],
+      "message": "Bonjour et bienvenue sur le portail citoyen de NeoVille ! Je suis NOVA, votre assistante municipale. Comment puis-je vous aider aujourd'hui ?"
+    },
+    {
+      "id": "nova-002",
+      "category": "greeting",
+      "triggers": ["bonjour", "salut"],
+      "message": "Bonsoir, citoyen(ne) de NeoVille ! Je suis NOVA. Signalement, information sur un service, ou simple question — je suis la pour vous."
+    },
+    {
+      "id": "nova-003",
+      "category": "report",
+      "triggers": ["signaler", "signalement", "probleme", "incident", "panne"],
+      "message": "Je peux enregistrer votre signalement immediatement. Utilisez le formulaire de signalement accessible depuis le menu principal. Choisissez la categorie (Voirie, Transport, Environnement...) et decrivez le probleme."
+    },
+    {
+      "id": "nova-004",
+      "category": "report",
+      "triggers": ["voirie", "route", "trottoir", "nid de poule", "chaussee"],
+      "message": "Signalement voirie bien recu. La Direction de la Voirie de NeoVille intervient generalement sous 48 a 72h pour les problemes signales. Un agent vous contactera si necessaire."
+    },
+    {
+      "id": "nova-005",
+      "category": "report",
+      "triggers": ["lumiere", "lampadaire", "eclairage", "lampe", "obscurite"],
+      "message": "Un eclairage defectueux ? Merci de le signaler via le formulaire en precisent l'adresse exacte. Notre equipe electrique interviendra dans les 24h pour les zones a risque."
+    },
+    {
+      "id": "nova-006",
+      "category": "transport",
+      "triggers": ["bus", "metro", "tram", "transport", "ligne", "horaire"],
+      "message": "NeoTransit assure la mobilite 24h/24 sur NeoVille. Les horaires en temps reel sont disponibles sur l'application NeoTransit. Pour signaler une panne ou un retard, utilisez le formulaire de signalement."
+    },
+    {
+      "id": "nova-007",
+      "category": "environment",
+      "triggers": ["dechet", "poubelle", "ordure", "recyclage", "collecte"],
+      "message": "La collecte intelligente des dechets est asssuree par NeoVille Eco. Les bacs connectes signalent automatiquement leur niveau de remplissage. En cas de depot sauvage, utilisez notre formulaire de signalement."
+    },
+    {
+      "id": "nova-008",
+      "category": "environment",
+      "triggers": ["pollution", "air", "qualite", "fumee", "odeur"],
+      "message": "La qualite de l'air est surveillee en temps reel par nos capteurs IoT installes dans toute la ville. L'indice actuel est disponible sur le tableau de bord citoyen. Pour signaler une source de pollution, utilisez le formulaire."
+    },
+    {
+      "id": "nova-009",
+      "category": "security",
+      "triggers": ["urgence", "danger", "securite", "police", "agression"],
+      "message": "ALERTE : Pour toute urgence immediate, appelez le 17 (Police) ou le 112 (Secours). NOVA transfiere votre signalement a la Police Municipale. Ne restez pas dans une situation dangereuse."
+    },
+    {
+      "id": "nova-010",
+      "category": "security",
+      "triggers": ["bruit", "voisin", "nuisance", "tapage"],
+      "message": "Les nuisances sonores peuvent etre signalee via notre formulaire (categorie 'Bruit excessif'). La Police Municipale peut intervenir pour les tapage nocturne apres 22h00. Numero direct : 0800-NEO-004."
+    },
+    {
+      "id": "nova-011",
+      "category": "services",
+      "triggers": ["service", "mairie", "administration", "contact", "adresse"],
+      "message": "Tous les services municipaux de NeoVille sont accessibles depuis la section 'Services' du portail. Chaque fiche indique les horaires, l'email et le telephone direct du service."
+    },
+    {
+      "id": "nova-012",
+      "category": "services",
+      "triggers": ["horaire", "ouverture", "fermeture", "heure"],
+      "message": "Les horaires d'ouverture varient selon les services. La plupart des bureaux municipaux sont ouverts du lundi au vendredi de 08h00 a 17h00. Consultez la fiche de chaque service dans la section 'Services'."
+    },
+    {
+      "id": "nova-013",
+      "category": "documents",
+      "triggers": ["document", "carte", "identite", "passeport", "acte", "certificat"],
+      "message": "Les demandes de documents officiels (carte d'identite, acte de naissance, etc.) se font en ligne sur neoville.smart/docs ou en presentiel a la Mairie centrale, 1 Place de la Republique Numerique."
+    },
+    {
+      "id": "nova-014",
+      "category": "education",
+      "triggers": ["ecole", "inscription", "scolaire", "enfant", "classe"],
+      "message": "Les inscriptions scolaires pour la prochaine annee sont ouvertes du 1er mars au 30 avril. Rendez-vous sur le portail education ou contactez la Direction de l'Education : education@neoville.smart."
+    },
+    {
+      "id": "nova-015",
+      "category": "events",
+      "triggers": ["evenement", "agenda", "fete", "concert", "marche"],
+      "message": "L'agenda des evenements de NeoVille est mis a jour chaque semaine. Festivals, marches citoyens, ateliers numeriques... Retrouvez tout sur neoville.smart/agenda. Voulez-vous que je vous rappelle un evenement ?"
+    },
+    {
+      "id": "nova-016",
+      "category": "farewell",
+      "triggers": ["merci", "au revoir", "bye", "bonne journee", "a bientot", "parfait"],
+      "message": "Merci d'utiliser le portail citoyen de NeoVille. N'hesitez pas a revenir si vous avez d'autres questions. Ensemble, construisons une ville plus intelligente !"
+    },
+    {
+      "id": "nova-017",
+      "category": "farewell",
+      "triggers": ["super", "excellent", "tres bien", "nickel"],
+      "message": "Avec plaisir ! Votre participation active rend NeoVille meilleure chaque jour. Bonne journee, citoyen(ne) !"
+    },
+    {
+      "id": "nova-018",
+      "category": "general",
+      "triggers": [],
+      "message": "Je n'ai pas bien compris votre demande. Vous pouvez me poser des questions sur les services municipaux, signaler un probleme, ou demander des informations pratiques sur NeoVille."
+    },
+    {
+      "id": "nova-019",
+      "category": "general",
+      "triggers": [],
+      "message": "Votre message a ete bien recu. Pour une reponse plus precise, n'hesitez pas a utiliser le formulaire de signalement ou a contacter directement le service concerne via la section 'Services'."
+    },
+    {
+      "id": "nova-020",
+      "category": "general",
+      "triggers": [],
+      "message": "Je suis NOVA, l'assistante citoyenne de NeoVille. Je peux vous aider avec : les signalements, les services municipaux, les documents administratifs, les transports, et l'agenda de la ville."
+    }
+  ],
+
+  "defaultResponses": [
+    "Je transmets votre demande au service competent de NeoVille. Un agent vous repondra dans les 48h ouvrables.",
+    "Cette demande necessite l'intervention d'un agent municipal. Voulez-vous etre recontacte par email ?",
+    "Pour toute demande complexe, notre service citoyen est joignable au 0800-NEOVILLE du lundi au vendredi."
+  ],
+
+  "simulationConfig": {
+    "typingDelay": { "min": 800,  "max": 2000 },
+    "fetchDelay":  { "min": 1000, "max": 2500 },
+    "reportSubmitDelay": 1500
+  },
+
+  "i18n": {
+    "fr": {
+      "welcome":       "Bonjour, bienvenue sur NeoVille !",
+      "chat_placeholder": "Ecrivez votre message...",
+      "send":          "Envoyer",
+      "report_title":  "Nouveau signalement",
+      "report_submit": "Soumettre le signalement",
+      "services_title":"Nos services",
+      "settings_title":"Parametres",
+      "loading":       "Chargement en cours...",
+      "success":       "Signalement envoye avec succes !",
+      "error_empty":   "Ce champ est obligatoire."
+    },
+    "en": {
+      "welcome":       "Hello, welcome to NeoVille!",
+      "chat_placeholder": "Type your message...",
+      "send":          "Send",
+      "report_title":  "New Report",
+      "report_submit": "Submit Report",
+      "services_title":"Our Services",
+      "settings_title":"Settings",
+      "loading":       "Loading...",
+      "success":       "Report submitted successfully!",
+      "error_empty":   "This field is required."
+    }
+  }
+}
