@@ -7,7 +7,6 @@ import Reports from './pages/Reports';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
 import Settings from './pages/Settings';
-import NotFound from './pages/NotFound';
 
 function AppLayout() {
   const { citizen } = useUser();
@@ -23,7 +22,6 @@ function AppLayout() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/parametres" element={<Settings />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>
