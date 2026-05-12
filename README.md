@@ -31,7 +31,7 @@ L'application sera disponible sur `http://localhost:5173`
 | `/services` | Services | Liste des services municipaux |
 | `/services/:id` | ServiceDetail | **Route dynamique** — détail d'un service |
 | `/parametres` | Settings | Paramètres et personnalisation |
-| `*` | NotFound | Page 404 personnalisée |
+
 
 ## Choix techniques
 
@@ -57,7 +57,6 @@ src/
 │   ├── Services.jsx   # Liste services
 │   ├── ServiceDetail.jsx  # Détail service (/services/:id)
 │   ├── Settings.jsx   # Paramètres
-│   └── NotFound.jsx   # 404
 ├── context/
 │   └── UserContext.jsx    # Profil citoyen global
 ├── reducers/
